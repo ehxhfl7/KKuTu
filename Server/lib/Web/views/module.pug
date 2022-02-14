@@ -58,17 +58,14 @@
 
 mixin Menu()
 	div.Menu
-		- for(i in MENU)
-			- if(MENU[i].href)
-				button.menu-btn(id='menu-item-'+MENU[i].key, onclick='location.href = "'+MENU[i].href+'";')!= L(MENU[i].key)
-			- else if(MENU[i].sub)
-				div.menu-btn(id='menu-item-'+MENU[i].key)!= L(MENU[i].key)
-					div.menu-sub-separator
-					- for(j in MENU[i].sub)
-						div.menu-sub-btn(onclick='location.href = "'+MENU[i].sub[j].href+'";')!= L(MENU[i].sub[j].key)
-		div#quick-search
-			input#quick-search-tf(placeholder=L('QUICK_HOLDER'))
-			button#quick-search-btn!= L('QUICK_BTN')
+		div#menu-title(onclick='location.href = "/";', style='cursor: pointer;')
+			div#title-logo
+				//- 로고 이미지를 바꾸고 싶으시다면 아래의 이미지 경로를 수정하시거나 .../img/kkutu/logo.png 이미지를 변경해주세요.
+				img(src='/img/kkutu/logo.png' style='width: 40px; height: 40px;')
+			//- ko_KR.json의 TITLE_NAME을 본인의 끄투 서버 이름으로 수정해주세요.
+			div#title-name= L('TITLE_NAME')
+		//- 출처 표시입니다. 지우지 말아주세요.
+		div#menu-license(onclick='window.open("https://daldal.so/w/참나무/도토리디자인");')= '도토리 디자인'
 		div#account
 			span#profile= SESSION.profile ? JSON.stringify(SESSION.profile) : '{}'
 			div#account-info

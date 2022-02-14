@@ -60,43 +60,15 @@ input:focus, textarea:focus, button:focus{
 span{
 	display: none;
 }
-.Menu{ min-width: 500px; }
-.Menu .menu-btn{
-	float: left;
-	padding: 7px 5px 5px 5px;
-	border: none;
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	width: 100px;
-	height: 18px;
-	font-size: 15px;
-	text-align: center;
-	color: #47330D;
-	background-image: url('/img/topbg.png');
-	background-color: #DEAF56;
-	transition: all 200ms ease;
+.Menu{
+	width: 1010px;
+	height: 100%;
+	min-width: 500px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0px auto;
 }
-.Menu .menu-btn:hover{ padding-top: 12px; height: auto; box-shadow: 0px 2px 2px #141414; background-image: none; background-color: #EFC067; }
-.Menu .menu-btn:active{ color: #FFFFFF; background-color: #CD9E45; }
-	.Menu .menu-btn .menu-sub-separator{
-		display: none;
-		border-top: 1px dashed #777777;
-		margin: 3px 0px;
-	}
-	.Menu .menu-btn .menu-sub-btn{
-		display: none;
-		float: left;
-		margin-top: 4px;
-		width: 100px;
-		font-size: 13px;
-		color: #47330D;
-		cursor: pointer;
-	}
-	.Menu .menu-btn:hover .menu-sub-separator{ display: block; }
-	.Menu .menu-btn:hover .menu-sub-btn{ display: block; }
-	.Menu .menu-btn .menu-sub-btn:hover{ color: inherit; }
 #quick-search{ float: right; margin: 1px; }
 #quick-search-tf{
 	float: left;
@@ -128,7 +100,27 @@ span{
 }
 	.autocomp-item{ margin: 1px 0px; }
 	.autocomp-item:hover, .autocomp-select{ color: #FFFFFF; background-color: rgba(50, 50, 50, 0.8); }
-#account{ float: right; margin: 1px; font-size: 11px; color: #444444; }
+#menu-title{
+	float: left;
+	font-weight: bold;
+	color: #000;
+	display: flex;
+	align-items: center;
+}
+#title-logo{
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+#title-name{
+	float: left;
+	margin-left: 5px;
+}
+#menu-license{
+	color: #0000;
+	font-size: 10px;
+}
+#account{ float: right; font-weight: bold; margin: 1px; font-size: 13px; color: #444444; }
 #account-setting{
 	float: left;
 	padding-top: 8px;
@@ -136,14 +128,11 @@ span{
 	text-align: center;
 }
 #account-info{
-	float: left;
-	padding-top: 8px;
-	width: 80px;
-	text-align: center;
+	float: right;
 	cursor: pointer;
 	transition: color 300ms ease;
 }
-#account-info:hover{ color: #EEEEEE; }
+#account-info:hover{ color: #cccccc; }
 #global-notice{
 	margin-top: 30px;
 	color: #111111;
@@ -277,14 +266,12 @@ span{
 #Top{
 	position: fixed;
 	width: 100%;
-	height: 30px;
-	box-shadow: 0px 2px 2px #111111;
-	background-image: url('/img/topbg.png');
+	height: 50px;
+	background-color: #FFFFFF;
+	top: 0;
 	z-index: 5;
 }
 #Middle{
-	float: left;
-	margin-top: 50px;
 	width: 1010px;
 }
 #Bottom{
