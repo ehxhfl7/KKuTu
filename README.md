@@ -1,3 +1,6 @@
+# 읽어주세요
+- 이 레포지토리를 무단으로 사용·참고하지 마세요.
+
 # KKuTu
 - Made by [JJoriping](http://blog.jjo.kr/)
 - Special thanks to
